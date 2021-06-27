@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meals/categories_screen.dart';
+import 'package:meals/category_meal_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.pink,
@@ -30,6 +32,9 @@ class MyApp extends StatelessWidget {
             ),
       ),
       home: CategoriesScreen(),
+      routes: {
+        '/category-meals': (ctx) => CategoryMealScreen(),
+      },
     );
   }
 }
