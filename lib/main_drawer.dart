@@ -1,20 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:meals/favorites_screen.dart';
+import 'package:meals/filters_screen.dart';
+
+import 'tabs_screen.dart';
 
 class MainDrawer extends StatelessWidget {
-  Widget buildListTile(String title, IconData icon) {
-    return ListTile(
-      leading: Icon(icon),
-      title: Text(
-        title,
-        style: TextStyle(
-          fontFamily: 'RobotoCondensed',
-          fontSize: 26,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      onTap: () {},
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,8 +29,44 @@ class MainDrawer extends StatelessWidget {
           SizedBox(
             height: 30,
           ),
-          buildListTile('Meals', Icons.restaurant),
-          buildListTile('Settings', Icons.settings),
+          ListTile(
+            leading: Icon(Icons.restaurant),
+            title: Text(
+              'Meals',
+              style: TextStyle(
+                fontFamily: 'RobotoCondensed',
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => TabsScreen(),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.settings),
+            title: Text(
+              'Settings',
+              style: TextStyle(
+                fontFamily: 'RobotoCondensed',
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => FiltersScreen(),
+                ),
+              );
+            },
+          ),
         ],
       ),
     );
