@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meals/main_drawer.dart';
 import 'dummy_data.dart';
 import 'category_item.dart';
 
@@ -9,6 +10,7 @@ class CategoriesScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('DeliMeal'),
       ),
+      drawer: MainDrawer(),
       body: GridView(
         padding: const EdgeInsets.all(20),
         children: DUMMY_CATEGORIES
