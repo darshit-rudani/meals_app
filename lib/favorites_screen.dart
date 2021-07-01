@@ -5,10 +5,11 @@ class FavoritesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text(
-        'Favorites'
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Your Favorites'),
       ),
+      body: Text('Favorites'),
     );
   }
 }
