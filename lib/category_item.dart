@@ -34,7 +34,7 @@ class CategoryItem extends StatelessWidget {
           gradient: LinearGradient(
             colors: [colors.withOpacity(0.7), colors],
             begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
+            end: Alignment.topRight,
           ),
           borderRadius: BorderRadius.circular(15),
         ),
