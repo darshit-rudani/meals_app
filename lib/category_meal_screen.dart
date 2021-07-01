@@ -5,7 +5,6 @@ import 'dummy_data.dart';
 class CategoryMealScreen extends StatelessWidget {
   // final String CategoryId;
   // final String CategoryTitle;
-
   // CategoryMealScreen(this.CategoryId, this.CategoryTitle);
 
   @override

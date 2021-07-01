@@ -36,7 +36,7 @@ class MealItem extends StatelessWidget {
                 ClipRRect(
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(15),
-                    bottomRight: Radius.circular(15),
+                    topRight: Radius.circular(15),
                   ),
                   child: Image.network(
                     imageUrl,
