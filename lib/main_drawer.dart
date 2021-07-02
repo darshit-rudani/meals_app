@@ -40,18 +40,13 @@ class MainDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => TabsScreen(),
-                ),
-              );
+              Navigator.of(context).pushReplacementNamed(TabsScreen.routeName);
             },
           ),
           ListTile(
             leading: Icon(Icons.settings),
             title: Text(
-              'Settings',
+              'Filters',
               style: TextStyle(
                 fontFamily: 'RobotoCondensed',
                 fontSize: 26,
@@ -59,12 +54,7 @@ class MainDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => FiltersScreen(),
-                ),
-              );
+              Navigator.of(context).pushReplacementNamed(FiltersScreen.routeName);
             },
           ),
         ],

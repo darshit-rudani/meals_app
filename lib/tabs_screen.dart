@@ -5,6 +5,8 @@ import 'favorites_screen.dart';
 class TabsScreen extends StatefulWidget {
   const TabsScreen({Key? key}) : super(key: key);
 
+  static const routeName = '/tabs-Screen';
+
   @override
   _TabsScreenState createState() => _TabsScreenState();
 }

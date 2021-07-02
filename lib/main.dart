@@ -39,6 +39,7 @@ class MyApp extends StatelessWidget {
         '/category-meals': (ctx) => CategoryMealScreen(),
         '/meal-detail': (ctx) => MealDetailScreen(),
         '/filters': (ctx) => FiltersScreen(),
+        '/tabs-Screen':(ctx) => TabsScreen(),
       },
     );
   }
