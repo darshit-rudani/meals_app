@@ -1,13 +1,24 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dummy_data.dart';
 
 class MealDetailScreen extends StatelessWidget {
   static const routeName = '/meal-detail';
 
+  Widget buildSectionTitle(BuildContext context, String text) {
+    return Container(
+      padding: EdgeInsets.symmetric(
+        vertical: 10,
+      ),
+      child: Text(
+        text,
+        style: Theme.of(context).textTheme.headline6,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    final mealId = ModalRoute.of(context)!.settings.arguments as String;
+    final mealId = ModalRoute.of(context).settings.arguments as String;
     final selectedMeal = DUMMY_MEALS.firstWhere((meal) => meal.id == mealId);
     return Scaffold(
       appBar: AppBar(
@@ -24,13 +35,7 @@ class MealDetailScreen extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            Container(
-              padding: EdgeInsets.symmetric(vertical: 10),
-              child: Text(
-                'Ingredients',
-                style: Theme.of(context).textTheme.headline6,
-              ),
-            ),
+            buildSectionTitle(context, 'Ingredients'),
             Container(
               decoration: BoxDecoration(
                 border: Border.all(
@@ -60,13 +65,7 @@ class MealDetailScreen extends StatelessWidget {
                 itemCount: selectedMeal.ingredients.length,
               ),
             ),
-            Container(
-              padding: EdgeInsets.symmetric(vertical: 10),
-              child: Text(
-                'Steps',
-                style: Theme.of(context).textTheme.headline6,
-              ),
-            ),
+            buildSectionTitle(context, 'Steps'),
             Container(
               decoration: BoxDecoration(
                 border: Border.all(
@@ -101,6 +100,14 @@ class MealDetailScreen extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          Icons.delete,
+        ),
+        onPressed: () {
+          Navigator.of(context).pop(mealId);
+        },
       ),
     );
   }

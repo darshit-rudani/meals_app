@@ -3,7 +3,6 @@ import 'categories_screen.dart';
 import 'favorites_screen.dart';
 
 class TabsScreen extends StatefulWidget {
-  const TabsScreen({Key? key}) : super(key: key);
 
   static const routeName = '/tabs-Screen';
 
