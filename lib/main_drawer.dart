@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:meals/favorites_screen.dart';
 import 'package:meals/filters_screen.dart';
 
 import 'tabs_screen.dart';

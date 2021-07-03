@@ -3,7 +3,6 @@ import 'categories_screen.dart';
 import 'favorites_screen.dart';
 
 class TabsScreen extends StatefulWidget {
-
   static const routeName = '/tabs-Screen';
 
   @override
@@ -41,18 +40,14 @@ class _TabsScreenState extends State<TabsScreen> {
             icon: Icon(
               Icons.category,
             ),
-            title: Text(
-              'Categories',
-            ),
+            label: 'Categories',
           ),
           BottomNavigationBarItem(
             backgroundColor: Theme.of(context).primaryColor,
             icon: Icon(
               Icons.star,
             ),
-            title: Text(
-              'Favorites',
-            ),
+            label: 'Favorites',
           ),
         ],
       ),
